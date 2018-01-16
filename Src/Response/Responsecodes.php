@@ -1,6 +1,6 @@
 <?php
 
-namespace Tanel\PHPWebKit\Http;
+namespace Tanel\PHPWebKit\Response;
 
 interface ResponseCodes {
     /**
@@ -12,6 +12,8 @@ interface ResponseCodes {
      * 5xxx 服务状态
      * 6xxx 接口状态
      */
+
+    //1xxx
     const PM_INVALID         = 1000; //参数无法通过验证
     const PM_NOT_ALLOW_EMPTY = 1001; //参数不允许为空
     const PM_MISSING         = 1002; //缺少必要参数
@@ -63,3 +65,5 @@ interface ResponseCodes {
     const API_VERSION_EROR = 6003; //版本不支持
     const API_TIMEOUT      = 6004; //接口超时
 }
+
+
