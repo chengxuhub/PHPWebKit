@@ -26,9 +26,9 @@ interface ResponseCodes {
     const SUCC_INSERT  = 2001; //插入成功
     const SUCC_UPDATE  = 2002; //更新成功
     const SUCC_CHANGE  = 2003; //修改成功
-    const SUCC_REPLACE = 2004; //删除成功
+    const SUCC_REPLACE = 2004; //替换成功
     const SUCC_DELETE  = 2005; //删除成功
-    const SUCC_REMOVE  = 2005; //移除成功
+    const SUCC_REMOVE  = 2006; //移除成功
 
     //3xxx
     const FAIL_OPRATE  = 3000; //操作失败
@@ -44,14 +44,14 @@ interface ResponseCodes {
     const FAIL_REQUEST = 3010; //请求失败
 
     //4xxx
-    const USER_EXCEPTION    = 4000; //用户态异常
-    const USER_NOT_FOUND    = 4001; //用户不存在
-    const USER_NOT_LOGININ  = 4002; //用户未登录
-    const USER_PWD_ERROR    = 4003; //密码错误
-    const USER_PWD_DIFF     = 4004; //两次密码不一致
-    const USER_IS_EXIST     = 4005; //用户已注册
-    const USER_NO_AUTH      = 4006; //用户没用权限
-    const USER_TOKEN_ERROR  = 4007; //用户授权口令错误
+    const USER_EXCEPTION   = 4000; //用户态异常
+    const USER_NOT_FOUND   = 4001; //用户不存在
+    const USER_NOT_LOGININ = 4002; //用户未登录
+    const USER_PWD_ERROR   = 4003; //密码错误
+    const USER_PWD_DIFF    = 4004; //两次密码不一致
+    const USER_IS_EXIST    = 4005; //用户已注册
+    const USER_NO_AUTH     = 4006; //用户没用权限
+    const USER_TOKEN_ERROR = 4007; //用户授权口令错误
 
     //5xxx
     const SERVER_EXCEPTION = 5000; //服务器异常
@@ -65,5 +65,3 @@ interface ResponseCodes {
     const API_VERSION_EROR = 6003; //版本不支持
     const API_TIMEOUT      = 6004; //接口超时
 }
-
-
