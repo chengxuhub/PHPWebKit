@@ -1,6 +1,6 @@
 <?php
 
-namespace Tanel\Response;
+namespace Tanel\PHPWebKit\Response;
 
 use ArrayIterator;
 use Countable;

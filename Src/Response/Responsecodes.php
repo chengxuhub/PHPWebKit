@@ -1,6 +1,6 @@
 <?php
 
-namespace Tanel\Http;
+namespace Tanel\PHPWebKit\Http;
 
 interface ResponseCodes {
     /**
@@ -29,21 +29,27 @@ interface ResponseCodes {
     const SUCC_REMOVE  = 2005; //移除成功
 
     //3xxx
+    const FAIL_OPRATE  = 3000; //操作失败
     const FAIL_INSERT  = 3001; //插入失败
     const FAIL_UPDATE  = 3002; //更新失败
     const FAIL_CHANGE  = 3003; //修改失败
     const FAIL_REPLACE = 3004; //删除失败
     const FAIL_DELETE  = 3005; //删除失败
     const FAIL_REMOVE  = 3006; //移除失败
+    const FAIL_CANCEL  = 3007; //取消失败
+    const FAIL_SEND    = 3008; //发送失败
+    const FAIL_CHECK   = 3009; //校验失败
+    const FAIL_REQUEST = 3010; //请求失败
 
     //4xxx
     const USER_EXCEPTION    = 4000; //用户态异常
     const USER_NOT_FOUND    = 4001; //用户不存在
     const USER_NOT_LOGININ  = 4002; //用户未登录
-    const USER_PASSWD_ERROR = 4003; //密码错误
-    const USER_IS_EXIST     = 4004; //用户已存在
-    const USER_TOKEN_ERROR  = 4005; //用户授权口令错误
+    const USER_PWD_ERROR    = 4003; //密码错误
+    const USER_PWD_DIFF     = 4004; //两次密码不一致
+    const USER_IS_EXIST     = 4005; //用户已注册
     const USER_NO_AUTH      = 4006; //用户没用权限
+    const USER_TOKEN_ERROR  = 4007; //用户授权口令错误
 
     //5xxx
     const SERVER_EXCEPTION = 5000; //服务器异常
@@ -56,5 +62,4 @@ interface ResponseCodes {
     const API_METHOD_ERROR = 6002; //接口请求方式错误
     const API_VERSION_EROR = 6003; //版本不支持
     const API_TIMEOUT      = 6004; //接口超时
-
 }

@@ -1,8 +1,8 @@
 {
-    "name": "tanel/phptools",
-    "description": "php configure about httpstatus, functions, lang",
+    "name": "tanel/PHPWebKit",
+    "description": "a uiniversal development kit for web application",
     "type": "library",
-    "keywords": ["httpstatus", "response", "functions"],
+    "keywords": ["devKit", "php", "functions"],
     "license": "MIT",
     "authors": [
         {
@@ -16,8 +16,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Tanel\\PHPtools\\Http\\": "src/Http",
-            "Tanel\\PHPtools\\Response\\": "src/Response",
+            "Tanel\\PHPWebKit\\Http\\": "src/Http",  //http协议
+            "Tanel\\PHPWebKit\\Response\\": "src/Response",  //常用响应码
+            "Tanel\\PHPWebKit\\Functions\\": "src/Functions", ////常用函数类
         }
     }
 }
