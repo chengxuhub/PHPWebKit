@@ -9,5 +9,5 @@
 Via Composer
 
 ``` bash
-$ composer require Tanel/PHPWebKit
+$ composer require tanel/php-web-kit
 ```

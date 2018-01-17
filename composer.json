@@ -1,5 +1,5 @@
 {
-    "name": "tanel/PHPWebKit",
+    "name": "tanel/php-web-kit",
     "description": "a uiniversal development kit for web application",
     "type": "library",
     "keywords": ["devKit", "php", "functions"],
@@ -16,9 +16,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Tanel\\PHPWebKit\\Http\\": "src/Http",  //http协议
-            "Tanel\\PHPWebKit\\Response\\": "src/Response",  //常用响应码
-            "Tanel\\PHPWebKit\\Functions\\": "src/Functions", ////常用函数类
+            "Tanel\\PHPWebKit\\Http\\": "src/Http",
+            "Tanel\\PHPWebKit\\Response\\": "src/Response",
+            "Tanel\\PHPWebKit\\Functions\\": "src/Functions"
         }
     }
 }
