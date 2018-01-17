@@ -67,11 +67,10 @@ class ResponseStatus implements Countable, IteratorAggregate {
 
     /**
      * 检查过滤状态码范围
-     * Filter a HTTP Status code.
      *
      * @param int $code
      *
-     * @throws InvalidArgumentException if the HTTP status code is invalid
+     * @throws InvalidArgumentException if the response status code is invalid
      *
      * @return int
      */
@@ -159,13 +158,13 @@ class ResponseStatus implements Countable, IteratorAggregate {
     }
 
     /**
-     * 添加信息的HTTP状态
-     * Add or Update the HTTP Status array.
+     * 添加新的状态信息
+     * Add or Update the Response Status array.
      *
-     * @param int    $code a HTTP status Code
+     * @param int    $code a status Code
      * @param string $text a associated reason phrase
      *
-     * @throws RuntimeException if the HTTP status code or the reason phrase are invalid
+     * @throws RuntimeException if the response status code or the reason phrase are invalid
      */
     public function mergeResponseStatus($code, $text) {
         $code = $this->filterStatusCode($code);
@@ -180,7 +179,7 @@ class ResponseStatus implements Countable, IteratorAggregate {
     /**
      * Check if the hasReasonPhrase exists in a collection.
      *
-     * @param int $statusText http status text
+     * @param int $statusText response status text
      *
      * @throws InvalidArgumentException If the requested $statusText is not valid
      *
@@ -200,7 +199,7 @@ class ResponseStatus implements Countable, IteratorAggregate {
      * 文字对应的状态码
      * Get the code for a given status text.
      *
-     * @param string $statusText http status text
+     * @param string $statusText response status text
      *
      * @throws InvalidArgumentException If the requested $statusText is not valid
      * @throws OutOfBoundsException     If not status code is found
@@ -214,13 +213,13 @@ class ResponseStatus implements Countable, IteratorAggregate {
             return $statusCode;
         }
 
-        throw new OutOfBoundsException(sprintf('No Http status code is associated to `%s`', $statusText));
+        throw new OutOfBoundsException(sprintf('No response status code is associated to `%s`', $statusText));
     }
 
     /**
      * Check if the code exists in a collection.
      *
-     * @param int $statusCode http status code
+     * @param int $statusCode response status code
      *
      * @throws InvalidArgumentException If the requested $statusCode is not valid
      *
@@ -240,7 +239,7 @@ class ResponseStatus implements Countable, IteratorAggregate {
      * 状态码对应的文字
      * Get the text for a given status code.
      *
-     * @param string $statusCode http status code
+     * @param string $statusCode response status code
      *
      * @throws InvalidArgumentException If the requested $statusCode is not valid
      * @throws OutOfBoundsException     If the requested $statusCode is not found
